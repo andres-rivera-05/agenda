@@ -38,13 +38,13 @@ export default function Agenda() {
 
   const agregaContacto = () => {
     if (nomInputText.length < 3) {
-      Alert.alert('Error', 'El nombre debe tener al menos 3 caracteres');
+      Alert.alert('Ups', 'El nombre debe tener al menos 3 caracteres');
       return;
     }
 
     if (contInputText.length < 8) {
       Alert.alert(
-        'Error',
+        'Ups',
         'El número de contacto debe tener al menos 8 caracteres',
       );
       return;
