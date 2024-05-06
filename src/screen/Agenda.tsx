@@ -23,8 +23,8 @@ export default function Agenda() {
   const objetContacto: agendaComponent[] = [
     {
       contactoID: 1,
-      contacto: 12324345,
-      nombre: 'andres',
+      contacto: 911,
+      nombre: 'Emergencias',
     },
   ];
 
@@ -78,9 +78,9 @@ export default function Agenda() {
 
       <ScrollView contentContainerStyle={styles.contactList}>
         {contacto.map(elemento => (
-          <View key={elemento.contactoID}>
-            <Text>{elemento.nombre}</Text>
-            <Text>{elemento.contacto}</Text>
+          <View key={elemento.contactoID} style={styles.contactItem}>
+            <Text style={styles.contactName}>{elemento.nombre}</Text>
+            <Text style={styles.contactNumber}>{elemento.contacto}</Text>
           </View>
         ))}
       </ScrollView>
@@ -91,6 +91,7 @@ export default function Agenda() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width:'100%',
     backgroundColor: '#fff',
     padding: 20,
   },
